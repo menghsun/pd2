@@ -10,8 +10,8 @@ int main()
 	Sudoku su_tmp;
 	vector<Sudoku> su;
 	ifstream in("su_infile",ios::in);
-	int num_element;
-
+	int num_element, num_case;
+	in >> num_case; // num_case is not used in this program
 	cout << "size = " << 
 		su.size() << endl;
 	num_element = 0;
