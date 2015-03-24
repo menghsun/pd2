@@ -8,4 +8,4 @@ main6.o: main6.cpp timer6.h
 	g++ -c main6.cpp
 
 clean:
-	rm main6 *.o
+	rm timer6 *.o
