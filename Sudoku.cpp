@@ -57,13 +57,24 @@ bool Sudoku::isCorrect()
 		for(int j=0; j<9; ++j)
 		{
 			location = 27*(i/3) + 3*(i%3)  
-								   +9*(j/3) + (j%3);
+				+9*(j/3) + (j%3);
 			check_arr[j] = map[location];
 		}
 		check_result = 
-					  checkUnity(check_arr);
+			checkUnity(check_arr);
 		if(check_result == false)
 			return false;
 	}
 	return true;
+}
+void Sudoku::setElement(int index, int value)
+{
+	map[index] = value;
+}
+int Sudoku::getFirstZeroIndex()
+{
+	for(int i=0;i<sudokuSize;++i)
+		if(map[i] == 0)
+			return i;
+	return -1;
 }
